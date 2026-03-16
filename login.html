@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#eef2f7;
+}
+
+.login-box{
+width:350px;
+margin:100px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#28a745;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:#1e7e34;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+
+<input type="text" id="username" placeholder="Enter Username" required>
+
+<input type="password" id="password" placeholder="Enter Password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+<script>
+
+function loginUser(event){
+
+event.preventDefault();
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="admin123")
+{
+window.location="dashboard.html";
+}
+else
+{
+alert("Invalid Login");
+}
+
+}
+
+</script>
+
+</body>
+</html>
